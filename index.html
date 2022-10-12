@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ! Tailwind CDN should not be used in production ! -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="./index.js"></script>
+    <title>Red Hat Apprenticeship</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <!-- * META TAGs * -->
+    <meta name="title" content="Read Hat Apprenticeship">
+    <meta name="description" content="Red Hat Apprenticeship UI task by - Varun S Athreya">
+    <meta name="keywords" content="RedHat, Apprenticeship, UI, Challenge, VarunSAthreya">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Varun S Athreya">
+</head>
+
+<body>
+    <!-- ! NAVBAR ! -->
+    <nav class="flex items-center lg:justify-start justify-center flex-wrap bg-black p-6">
+        <div class="md:p-0 pb-2 flex items-center justify-center">
+            <img src="/assets/logo.svg" alt="Red Hat" width="90%" />
+        </div>
+        <div class="flex justify-center w-9/12 text-white font-bold md:text-2xl text-lg text-center">
+            Apprenticeship Registration Form
+        </div>
+    </nav>
+
+    <!-- ! FORM ! -->
+    <div class="mt-20 max-w-6xl mx-auto px-6">
+        <form id="form" method="dialog">
+
+            <!-- ! NAME ! -->
+            <div class="grid md:grid-cols-2 md:gap-32">
+                <div>
+                    <label for="first-name">First Name<span aria-hidden="true" class="text-red-500 text-lg">*
+                        </span></label><br>
+                    <input id="first-name" name=" first_name" type="text" placeholder="First Name" required
+                        minlength="3"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                </div>
+                <div>
+                    <label for="last-name">Last Name<span aria-hidden="true" class="text-white text-lg">
+                        </span></label><br>
+                    <input id="last-name" name="last_name" type="text" placeholder="Last Name"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                </div>
+            </div>
+
+            <!-- ! EMAIL & NUMBER ! -->
+            <div class="grid md:grid-cols-2 md:gap-32 mt-6">
+                <div>
+                    <label for="email">Email<span aria-hidden="true" class="text-red-500 text-lg">*</span></label><br>
+                    <input id="email" name="email" type="email" placeholder="Email" required minlength="3"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                </div>
+                <div>
+                    <label for="mobile-number">Mobile Number<span aria-hidden="true"
+                            class="text-red-500 text-lg">*</span></label><br>
+                    <input id="mobile-number" name="mobile_number" type="number" placeholder="Mobile Number" required
+                        min="1000000000" max="9999999999"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                </div>
+            </div>
+
+            <!-- ! LOCATION & GENDER ! -->
+            <div class="grid md:grid-cols-2 md:gap-32 mt-6">
+                <div>
+                    <label for="location">Current Location<span aria-hidden="true"
+                            class="text-red-500 text-lg">*</span></label><br>
+                    <input id="location" name="location" type="text" placeholder="Current Location" required
+                        minlength="5"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                </div>
+                <div>
+                    <fieldset id="gender">
+                        <legend for="gender">Gender<span aria-hidden="true" class="text-red-500 text-lg">*</span>
+                        </legend><br>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female" class="ml-10">
+                        <label for="female">Female</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- ! COLLEGE & DATE OF BIRTH ! -->
+            <div class="grid md:grid-cols-2 md:gap-32 mt-6">
+                <div>
+                    <label for="college">College / University<span aria-hidden="true"
+                            class="text-red-500 text-lg">*</span></label><br>
+                    <select
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="college" name="college">
+                        <option>Please Select your College / University</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dob">Date Of Birth<span aria-hidden="true"
+                            class="text-red-500 text-lg">*</span></label><br>
+                    <input id="dob" name="dob" type="date" placeholder="Date Of Birth" required
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                </div>
+            </div>
+
+            <!-- ! SKILLS ! -->
+            <label for="" class="block mt-6">Skill Bar</label>
+
+            <!-- ! HTML ! -->
+            <div class="grid md:grid-cols-2 mt-6 pl-6">
+                <div>
+                    <div class="grid grid-cols-6">
+                        <div class="">
+                            <label for="">HTML</label>
+                        </div>
+                        <div class="col-span-5">
+                            <button type="button" onClick="decrement(html)" class="flexbox">
+                                <svg width="16" height="4" viewBox="0 0 16 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="4" rx="2" fill="#6A6E73" />
+                                </svg>
+                            </button>
+
+                            <input type="range" min="1" max="100" value="50"
+                                class="w-9/12 h-2 rounded-lg cursor-pointer" id="html">
+
+                            <button type="button" onClick="increment(html)" class="flexbox">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="6" width="16" height="4" rx="2" fill="#6A6E73" />
+                                    <rect x="6" y="16" width="16" height="4" rx="2" transform="rotate(-90 6 16)"
+                                        fill="#6A6E73" />
+                                </svg>
+
+                            </button>
+                            <div class="flex justify-between" style="width: 83%;">
+                                <span class="ml-4">0</span><span>100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ! CSS ! -->
+            <div class="grid md:grid-cols-2 mt-6 pl-6">
+                <div>
+                    <div class="grid grid-cols-6">
+                        <div class="">
+                            <label for="">CSS</label>
+                        </div>
+                        <div class="col-span-5">
+                            <button type="button" onClick="decrement(css)" class="flexbox">
+                                <svg width="16" height="4" viewBox="0 0 16 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="4" rx="2" fill="#6A6E73" />
+                                </svg>
+                            </button>
+
+                            <input type="range" min="1" max="100" value="50"
+                                class="w-9/12 h-2 rounded-lg cursor-pointer" id="css">
+
+                            <button type="button" onClick="increment(css)" class="flexbox">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="6" width="16" height="4" rx="2" fill="#6A6E73" />
+                                    <rect x="6" y="16" width="16" height="4" rx="2" transform="rotate(-90 6 16)"
+                                        fill="#6A6E73" />
+                                </svg>
+
+                            </button>
+                            <div class="flex justify-between" style="width: 83%;">
+                                <span class="ml-4">0</span><span>100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ! JAVASCRIPT ! -->
+            <div class="grid md:grid-cols-2 mt-6 pl-6">
+                <div>
+                    <div class="grid grid-cols-6">
+                        <div class="">
+                            <label for="">Javascript</label>
+                        </div>
+                        <div class="col-span-5">
+                            <button type="button" onClick="decrement(js)" class="flexbox">
+                                <svg width="16" height="4" viewBox="0 0 16 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="4" rx="2" fill="#6A6E73" />
+                                </svg>
+                            </button>
+
+                            <input type="range" min="1" max="100" value="50"
+                                class="w-9/12 h-2 rounded-lg cursor-pointer" id="js">
+
+                            <button type="button" onClick="increment(js)" class="flexbox">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="6" width="16" height="4" rx="2" fill="#6A6E73" />
+                                    <rect x="6" y="16" width="16" height="4" rx="2" transform="rotate(-90 6 16)"
+                                        fill="#6A6E73" />
+                                </svg>
+
+                            </button>
+                            <div class="flex justify-between" style="width: 83%;">
+                                <span class="ml-4">0</span><span>100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ! SUBMIT & CLEAR ! -->
+            <div class="grid grid-cols-2 gap-32 mt-6">
+                <div class="justify-self-end">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
+                        Submit
+                    </button>
+                </div>
+                <div class="">
+                    <button type="reset"
+                        class="hover:border-blue-700 hover:text-blue-700 text-blue-500 border border-blue-500 font-bold py-2 px-4 rounded">
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- * EXTRA SPACE AT THE END * -->
+    <div class="mb-32"></div>
+</body>
+
+</html>
